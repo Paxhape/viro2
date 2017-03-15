@@ -1,0 +1,5 @@
+name: viro2
+type: module
+description: ViRo2 drupal module to give You access to online networking laboratory
+core: 8.x
+package: Other

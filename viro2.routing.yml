@@ -1,0 +1,7 @@
+viro2_listCap:
+  path: lab/capabilities
+  defaults:
+    _controller: '\Drupal\viro2\Controller\ViRo2Controller::listCap'
+    _title: 'Networking Server Capabilities'
+  requirements:
+    _permission: 'access content'
