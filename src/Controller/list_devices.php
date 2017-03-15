@@ -8,15 +8,20 @@
  namespace Drupal\viro2\Controller;
 
  use Drupal\Core\Controller\ControllerBase;
- use Drupal\Core\Url;
- use Symphony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
  class list_device extends ControllerBase {
+
+   /**
+   *
+   *
+   */
 
    public function listDev() {
 #definicia premennych
     $build = '';
-    $rows = array();
+    $pomArray = '';
+    $rows = array(explode("\n",shell_exec('virsh list --all')));
+
      $header =  array(t('Id'), t('Name'), t('State'));
      $build['table'] = array(
        '#type' => 'table',
@@ -28,4 +33,3 @@
    }
 
  }
- 
