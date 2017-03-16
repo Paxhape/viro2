@@ -1,32 +1,7 @@
-viro2_listCap:
-  path: lab/list_dev
+viro2:
+  path: lab/topo_list
   defaults:
-    _controller: '\Drupal\viro2\Controller\list_dev::list_dev_main'
-    _title: 'Laboratory devices which can be used in topology'
-  requirements:
-    _permission: 'access content'
-
-viro2_new_conf:
-  path: lab/new_conf
-  defaults:
-    _controller: '\Drupal\viro2\Controller\new_conf::new_conf_main'
-    _title: 'Add new configuration of topology to Viro2'
-  requirements:
-    _permission: 'access content'
-
-viro2_edit_conf:
-  path: lab/edit_conf
-  defaults:
-    _controller: 'Drupal\viro2\Controller\edit_conf::edit_conf_main'
-    _title: 'Edit topology definitions'
-  requirements:
-    _permission: 'access content'
-
-
-viro2_erase_conf:
-  path: lab/erase_conf
-  defaults:
-    _controller: 'Drupal\viro2\Controller\erase_conf::erase_conf_main'
-    _title: 'Erase topology '
+    _controller: '\Drupal\viro2\Controller\Viro2Controller::topo_list'
+    _title: 'List all topologies possible to reserve'
   requirements:
     _permission: 'access content'
