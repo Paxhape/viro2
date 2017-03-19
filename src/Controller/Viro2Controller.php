@@ -9,18 +9,18 @@
 
  use Drupal\Core\Controller\ControllerBase;
 
- class list_device extends ControllerBase {
+ class Viro2Controller extends ControllerBase {
 
    /**
    * @function
-   * Funkcia na vypis existujucich topologii
+   * Funkcia intra do ViRo2 prostredia
    */
 
 
-   public function topo_list(){
-
-     $results = db_querry("");
+   public function intro_page(){
      
+
+
    }
 
 
