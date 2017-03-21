@@ -1,7 +1,7 @@
-name: viro2
-description: ViRo2 drupal module to give You access to online networking laboratory
+name: Viro
+description: ViRo2 drupal module to give you access to online networking laboratory
 package: Networking
 
 type: module
 core: 8.x
-version: 0.1
+version: 2.0

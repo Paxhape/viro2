@@ -17,10 +17,12 @@ class FirmaForm extends FormBase {
 
   public function buildForm(array $form, FormStateInterface $form_state) {
 
+    $topo = db_query("SELECT name FROM `topology` WHERE active=1")
+
+
     $form['topology_select'] = array(
       '#type' => 'select',
       '#title' => t('Select topology to reserve'),
-      '#default_value' => variable_get("topology_select", "topology1")
       '#options' => array(
         'topology1' => t("Topo1"),
         'topology2' => t("Topo2"),
@@ -31,7 +33,6 @@ class FirmaForm extends FormBase {
     $form['day_select'] = array(
       '#type' => 'select',
       '#title' => t('Select day when to reserve'),
-      '#default_value' => variable_get("day_select", "day1")
       '#options' => array(
         'day1' => t("Monday"),
         'day2' => t("Thusday"),
@@ -42,7 +43,6 @@ class FirmaForm extends FormBase {
     $form['hour_select'] = array(
       '#type' => 'select',
       '#title' => t('Select hour when to reserve'),
-      '#default_value' => variable_get("hour_select", "hour1")
       '#options' => array(
         'hour1' => t("12:00"),
         'hour2' => t("16:00"),
@@ -65,6 +65,7 @@ class FirmaForm extends FormBase {
   }
 
 public function submitForm(array &$form, FormStateInterface $form_state) {
+
   drupal_set_message(
     t('Your reservation has been sucessfully written to database')
   );

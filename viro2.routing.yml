@@ -1,16 +1,23 @@
 
 
 viro2_intro_page:
-  path: lab/intro_page
+  path: 'lab/intro_page'
   defaults:
     _controller: '\Drupal\viro2\Controller\Viro2Controller::intro_page'
     _title: 'Introduction to ViRo2'
   requirements:
     _permission: 'access content'
 viro2_reserve_topo:
-  path: lab/reserve_topo
+  path: 'lab/reserve_topo'
   defaults:
     _title: 'Reservation of topology'
     _form: '\Drupal\viro2\Form\ReservationForm'
+  requirements:
+    _permission: 'access content'
+viro2.list.topo:
+  path: 'list/topo'
+  defaults:
+    _controller: 'Drupal\viro2\src\Controlller\Viro2Controller.php'
+    _title: 'Topologies'
   requirements:
     _permission: 'access content'
