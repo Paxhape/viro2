@@ -18,20 +18,18 @@
    */
 
    public function list_topologies(){
+
     $build='';
     $rows = array();
 
     $select = db_query("SELECT name,description FROM `topology` WHERE active=1");
-    while ($prvok = db_fetch_object($select)) {
+    while ($prvok = $select->fetchAll()) {
       $rows[] = array($prvok->name,
               $prvok->description,
             );
     }
 
     $header = array(t('Name'),t('Description'));
-
-    $rows[]=array
-
     $build['topologies'] = array(
       '#type' => 'table',
       '#header' => $header,
@@ -39,6 +37,20 @@
       '#empty' => t('No topologies available'),
     );
     return $build;
+   }
+
+   /**
+   * @function
+   * Funkcia intra do ViRo2 prostredia
+   */
+
+   public function list_reservations (){
+
+     $build = '' ;
+     $rows = array();
+
+     $select = db_query("");
+
    }
 
  }
